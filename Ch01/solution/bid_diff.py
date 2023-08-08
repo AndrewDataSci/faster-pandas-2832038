@@ -22,3 +22,5 @@ def median_diff(csv_file):
     top2 = df.groupby('id')['price'].apply(second)
     diffs = top1 - top2
     return diffs.median()
+
+%prun - s culative median_diff('./bids.csv.xz')
